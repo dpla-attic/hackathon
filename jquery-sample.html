@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Using jQuery with the DPLA</title>
+	
+	<script type="text/javascript"
+	    src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">
+	</script>
+
+	<script>
+	    $(document).ready(function() {
+	        $.ajax({
+	            url: "http://api.dp.la/dev/item/?",
+	            dataType: 'jsonp',
+	            success: function(data){
+	                $.each(data.docs, function(i,item){
+	                    var element = item.subject;							
+	                    var container = '<br>' + element + '<br>';							
+	                    $(container).appendTo('#results');
+	                })
+	            }
+	        });		
+	    });	
+	</script>
+</head>
+<body>
+	<h1>Using jQuery with the DPLA</h1>
+	<div id="results">results</div>
+</body>
+</html>
