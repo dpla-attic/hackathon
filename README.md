@@ -4,7 +4,11 @@ This is the holding tank for work related to the DPLA hackathon. We'll gather sa
 
 ## Hackathon related links
 
-[DPLA Plaftform Documentation](http://dp.la/dev/wiki/Documentation)
+[DPLA Platform Technical Overview](http://dp.la/dev/wiki/sites/dpladev/images/DPLA_Platform_Overview_2012-04-02.pdf)
+
+[DPLA Platform Technical Overview -- for commenting and editing ](https://docs.google.com/a/evident.com/document/d/1Pfl_q_LSLgpIyzA7Gk2DmdZb2zqJRGrYQESVxhKwkLY/edit)
+
+[DPLA Platform Documentation](http://dp.la/dev/wiki/Documentation)
 
 [The most recent item API endpoint](http://api.dp.la/dev/item/)
 
