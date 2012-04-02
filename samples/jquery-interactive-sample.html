@@ -1,0 +1,43 @@
+<!doctype html>
+<html><head>
+<meta charset="utf-8">
+<title>Using jQuery with the DPLA</title>
+</head><body>
+<h1>Using jQuery with the DPLA</h1>
+<form id="searchForm"><fieldset><legend>Search DPLA</legend>
+<input type="hidden" name="search_type" value="keyword" />
+<input type="hidden" name="limit" value="20" />
+<label>Keyword: <input type="text" name="query" placeholder="a keyword" /></label> <input type="submit" value="Search" />
+</fieldset></form>
+<div id="results"></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>
+jQuery(document).ready(function($){
+	var $searchForm = $("#searchForm");
+	$searchForm.on("submit",function(e){
+		var submit = $searchForm.find('[type="submit"]').attr("disabled","disabled"),
+			params = $searchForm.serialize(),
+			$results = $("#results").empty();
+		$.getJSON("http://api.dp.la/dev/item/?" + params + "&callback=?")
+			.done(function(data){
+				var output = '',
+					numResults = (data.num_found) ? data.num_found : 0;
+				output += '<strong>' + numResults + '</strong> results found:<br />';
+				$.each(data.docs,function(i,item){
+					output += '<div class="result"><h2>Result ' + (i + 1) + '</h2>' + JSON.stringify(item) + '</div>';
+					});
+				$results.append(output);
+				$searchForm[0].reset();
+				})
+			.fail(function(){
+				alert('Glaring error');
+				})
+			.always(function(){
+				submit.removeAttr("disabled");
+				});
+		return false;
+		});
+	});
+</script>
+</body></html>
