@@ -1,8 +1,10 @@
 #DPLA Platform Hackathon
 
-This is the holding tank for work related to the DPLA hackathon. We'll gather sample code, docs, links, and things produced by the hackathon here.
+This is a holding tank for resources related to the DPLA hackathon. We'll gather sample code, docs, links, and references to things produced by the hackathon here.
 
 ## Hackathon related links
+
+Consider these links a dpla platform "crash course."
 
 [DPLA Platform Technical Overview](http://dp.la/dev/wiki/sites/dpladev/images/DPLA_Platform_Overview_2012-04-02.pdf)
 
@@ -16,17 +18,28 @@ This is the holding tank for work related to the DPLA hackathon. We'll gather sa
 
 [The DPLA Platform codebase](https://github.com/dpla)
 
+## What you should do before the hackathon
+
+* Please look over the materials above.
+* Please set up a github account as we'll be coordinating our development here. Git skills are pretty important too,  [the github docs](http://help.github.com/) are refreshingly good.
+
 ## Code Samples
 
 Find code samples in the samples directory
 
-## Hackathon products
+## Hackathon Output
 
-Find the things that were produced by the hackathon in the output directory
+We'll fork the repositories of every hackathon participant into the main [dpla github account](https://github.com/dpla). We may change how we organize things later, but this will suffice for now. 
+
+## Staging servers
+
+We will provide a fairly beefy ubuntu linux VM for staging hackathon apps, and we're prepared to provision more VMs if needed. If you prefer to deploy on your own infrastructure, that's fine too. These VMs will be temporary.  We will probably promote some (hopefully all!) hackathon apps to live permanently in the dp.la infrastructure. 
+
+We will provide sysadmin expertise to help stage your apps. We have a wide range of skills and are happy to work with you to stage apps in frameworks we're not familiar with. If you require windows hosting, we will be able to provide a minimal amount of support but can deploy a temporary VM for you.
 
 ## License
 
-Dual licensed under the MIT license (below) and [GPL license](http://www.gnu.org/licenses/gpl-3.0.html).
+Dual licensed under the MIT license (below) and [GPLv3 license](http://www.gnu.org/licenses/gpl-3.0.html).
 
 <small>
 MIT License
